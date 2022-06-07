@@ -5,6 +5,13 @@ body {
     align-items: center;
 }
 
+.buttons {
+    display:flex;
+    justify-content: space-around;
+    gap: 50px;
+    padding: 30px;
+}
+
 .container {
     display:flex;
     height: 600px;
@@ -15,6 +22,7 @@ body {
     margin:0;
     padding:0;
 }
+
 .line {
     margin:0;
     padding:0;

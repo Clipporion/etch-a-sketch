@@ -2,6 +2,8 @@ let body = document.querySelector("body");
 let container = document.createElement("div");
 container.className = "container";
 let intialize = document.querySelector("#initialize");
+let rainbow = document.querySelector("#rainbow");
+let black = document.querySelector("#black");
 
 for (let i = 1; i<= (16); i++) {
     let line = document.createElement("div");
@@ -42,5 +44,22 @@ function gridSize() {
         gridSize()}
     }
 
+function changeColor(button) {
+    let buttonSelect = button.target.id.toLowerCase();
+    let pixels = document.querySelectorAll("div.pixel");
+    
+    if (buttonSelect == "rainbow") {
+        pixels.forEach(function(pix) {pix.addEventListener("mouseover", function() {
+            let rngA = Math.floor(Math.random()*255);
+            let rngB = Math.floor(Math.random()*255);
+            let rngC = Math.floor(Math.random()*255);            
+            pix.style.backgroundColor =`rgb(${rngA},${rngB},${rngC})`})});
+    } else if (buttonSelect == "black") {
+        pixels.forEach(function(pix) {pix.addEventListener("mouseover", function() {pix.style.backgroundColor =`black`})});
+    }
+}
+
+rainbow.addEventListener("click", changeColor)
+black.addEventListener("click", changeColor)
 intialize.addEventListener("click",gridSize)
 body.appendChild(container);
