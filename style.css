@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display:flex;
+    height: 600px;
+    width: 600px;
+    box-sizing: content-box;
+    border: 1px solid black;
+    flex: auto;
+    margin:0;
+    padding:0;
+}
+.line {
+    margin:0;
+    padding:0;
+    display: flex;
+    flex: auto;
+    flex-direction: column; 
+}
+
+.pixel {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    border: 1px solid black;
+    flex: auto;
+}
